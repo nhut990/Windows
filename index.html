@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Học HTML Cơ Bản</title>
-  <meta name="description" content="Giải thích từng phần mã HTML cơ bản cho người mới bắt đầu" />
+  <title>Học HTML & Ký Tự Cơ Bản</title>
+  <meta name="description" content="Giải thích ký tự, thẻ và cấu trúc HTML cơ bản cho người mới học" />
   <style>
     :root{--bg:#f7f9fc;--card:#ffffff;--accent:#1e90ff}
     *{box-sizing:border-box}
@@ -24,74 +24,91 @@
     <header>
       <div class="logo">HTML</div>
       <div>
-        <h1>Giới thiệu HTML Cơ Bản</h1>
-        <p class="lead">Trang này giúp bạn hiểu rõ từng ký hiệu trong mã HTML — ví dụ <code>&lt;</code>, <code>&gt;</code>, <code>{}</code>, <code>()</code> là gì và chúng được dùng ra sao.</p>
+        <h1>Hướng Dẫn HTML và Ký Tự Cơ Bản</h1>
+        <p class="lead">Trang này giúp bạn hiểu rõ từng ký tự trong HTML — ví dụ: <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, <code>""</code>, <code>{}</code>, <code>()</code>...</p>
       </div>
     </header>
 
     <section class="card">
-      <h2>1️⃣ Giải thích các ký hiệu thường gặp</h2>
+      <h2>1️⃣ Giới thiệu các ký tự cơ bản trong HTML</h2>
       <ul>
-        <li><b>&lt; &gt;</b>: Dấu ngoặc nhọn dùng để bao thẻ HTML. Ví dụ <code>&lt;html&gt;</code> mở thẻ, <code>&lt;/html&gt;</code> đóng thẻ.</li>
-        <li><b>{ }</b>: Dấu ngoặc nhọn dùng trong CSS hoặc JavaScript để bao nội dung quy định. Ví dụ: <code>body { color: red; }</code></li>
-        <li><b>( )</b>: Dấu ngoặc tròn thường dùng trong hàm (function) trong JavaScript. Ví dụ: <code>alert("Xin chào!")</code></li>
-        <li><b>" "</b> hoặc <b>' '</b>: Dấu ngoặc kép/đơn bao quanh chuỗi ký tự (text string).</li>
-        <li><b>;</b>: Dấu chấm phẩy kết thúc lệnh trong CSS hoặc JavaScript.</li>
-        <li><b>//</b>: Ghi chú 1 dòng trong JavaScript (bị trình duyệt bỏ qua).</li>
-        <li><b>/* ... */</b>: Ghi chú nhiều dòng trong CSS hoặc JS.</li>
+        <li><b>&lt;</b> và <b>&gt;</b> — Dấu ngoặc nhọn: dùng để mở và đóng thẻ HTML.<br>Ví dụ: <code>&lt;p&gt;Xin chào&lt;/p&gt;</code></li>
+        <li><b>/</b> — Dấu gạch chéo: dùng trong thẻ đóng. Ví dụ: <code>&lt;/p&gt;</code></li>
+        <li><b>""</b> hoặc <b>''</b> — Dấu ngoặc kép/đơn: dùng để bao nội dung của thuộc tính. Ví dụ: <code>&lt;img src="hinh.jpg" alt='Ảnh minh họa'&gt;</code></li>
+        <li><b>=</b> — Dấu bằng: gán giá trị cho thuộc tính. Ví dụ: <code>src="hinh.jpg"</code></li>
+        <li><b>&amp;</b> — Dấu & được viết thành <code>&amp;amp;</code> trong HTML (để tránh bị nhầm là mã).<br>Ví dụ: Viết <code>&amp;amp;</code> để hiện ra &.</li>
+        <li><b>&nbsp;</b> — Khoảng trắng không ngắt dòng (non-breaking space).</li>
+        <li><b>{ }</b> — Dùng trong CSS hoặc JavaScript để chứa nội dung.<br>Ví dụ: <code>body { color: red; }</code></li>
+        <li><b>( )</b> — Dấu ngoặc tròn, dùng trong hàm JavaScript.<br>Ví dụ: <code>alert('Xin chào')</code></li>
+        <li><b>;</b> — Kết thúc lệnh trong CSS hoặc JavaScript.</li>
+        <li><b>:</b> — Dùng trong CSS để gán giá trị. Ví dụ: <code>color: blue;</code></li>
+        <li><b>/* */</b> — Ghi chú trong CSS hoặc JS (trình duyệt bỏ qua).</li>
+        <li><b>//</b> — Ghi chú 1 dòng trong JavaScript.</li>
       </ul>
     </section>
 
     <section class="card">
       <h2>2️⃣ Cấu trúc cơ bản của một trang HTML</h2>
       <pre>
-&lt;!DOCTYPE html&gt;  ← Khai báo đây là tài liệu HTML5
-&lt;html&gt;           ← Thẻ bao toàn bộ trang web
+&lt;!DOCTYPE html&gt;  ← Khai báo loại tài liệu HTML5
+&lt;html&gt;           ← Bắt đầu trang web
   &lt;head&gt;         ← Phần đầu: chứa tiêu đề, mô tả, CSS, meta...
     &lt;title&gt;Tiêu đề trang&lt;/title&gt;
   &lt;/head&gt;
 
-  &lt;body&gt;         ← Phần nội dung hiển thị trên trang
-    &lt;h1&gt;Tiêu đề lớn&lt;/h1&gt;
-    &lt;p&gt;Đoạn văn bản.&lt;/p&gt;
+  &lt;body&gt;         ← Phần nội dung hiển thị trên trình duyệt
+    &lt;h1&gt;Tiêu đề chính&lt;/h1&gt;
+    &lt;p&gt;Đây là một đoạn văn bản.&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
       </pre>
     </section>
 
     <section class="card">
-      <h2>3️⃣ Cách dùng CSS (trang trí giao diện)</h2>
-      <p>CSS giúp đổi màu, phông chữ, bố cục...</p>
+      <h2>3️⃣ Giải thích ký tự đặc biệt thường dùng trong HTML</h2>
+      <ul>
+        <li><code>&amp;lt;</code> → Hiển thị dấu <code>&lt;</code></li>
+        <li><code>&amp;gt;</code> → Hiển thị dấu <code>&gt;</code></li>
+        <li><code>&amp;amp;</code> → Hiển thị dấu <code>&amp;</code></li>
+        <li><code>&amp;quot;</code> → Hiển thị dấu <code>"</code></li>
+        <li><code>&amp;apos;</code> → Hiển thị dấu <code>'</code></li>
+        <li><code>&amp;copy;</code> → © Bản quyền</li>
+        <li><code>&amp;nbsp;</code> → Khoảng trắng (non-breaking space)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>4️⃣ Kết hợp HTML + CSS + JavaScript</h2>
       <pre>
-body {
-  background-color: lightblue; /* Màu nền */
-  color: black; /* Màu chữ */
-  font-family: Arial; /* Kiểu chữ */
-}
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+  body { background-color: lightyellow; }
+  h1 { color: blue; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Xin chào!&lt;/h1&gt;
+  &lt;button onclick="alert('Bạn đã bấm nút!')"&gt;Bấm vào đây&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
       </pre>
     </section>
 
     <section class="card">
-      <h2>4️⃣ JavaScript (tạo hành động cho web)</h2>
-      <p>JavaScript giúp web tương tác như bấm nút đổi màu, hiển thị thông báo...</p>
-      <pre>
-&lt;button onclick="alert('Xin chào!')"&gt;Bấm thử&lt;/button&gt;
-      </pre>
-    </section>
-
-    <section class="card">
-      <h2>5️⃣ Cách tải lên GitHub Pages</h2>
+      <h2>5️⃣ Hướng dẫn tải lên GitHub Pages</h2>
       <ol>
-        <li>Lưu file này tên <code>index.html</code>.</li>
-        <li>Đặt vào thư mục gốc của repo GitHub.</li>
-        <li>Push lên nhánh <b>main</b>.</li>
-        <li>Vào <b>Settings → Pages → Deploy from a branch → main → /(root)</b>.</li>
-        <li>Chờ vài phút rồi truy cập đường dẫn web của bạn.</li>
+        <li>Lưu file này với tên <code>index.html</code>.</li>
+        <li>Tải lên thư mục gốc của repository GitHub của bạn.</li>
+        <li>Chọn nhánh <b>main</b> trong phần <b>Settings → Pages</b>.</li>
+        <li>Chọn thư mục <b>/(root)</b> và bấm <b>Save</b>.</li>
+        <li>Truy cập đường dẫn: <code>https://tennguoidung.github.io/tenthuvien/</code></li>
       </ol>
     </section>
 
     <footer>
-      <small>© 2025 — Hướng dẫn HTML cơ bản. Muốn mình thêm phần CSS nâng cao hay hướng dẫn JavaScript không? Nói nhé!</small>
+      <small>© 2025 — Học HTML và ký tự cơ bản. Muốn thêm phần thực hành trực tiếp hoặc ví dụ minh họa nâng cao không?</small>
     </footer>
   </div>
 </body>
