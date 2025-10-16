@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trang Chủ - GitHub Pages</title>
-  <meta name="description" content="Trang mẫu đơn giản để đẩy lên GitHub Pages" />
+  <title>Học HTML Cơ Bản</title>
+  <meta name="description" content="Giải thích từng phần mã HTML cơ bản cho người mới bắt đầu" />
   <style>
     :root{--bg:#f7f9fc;--card:#ffffff;--accent:#1e90ff}
     *{box-sizing:border-box}
@@ -15,50 +15,84 @@
     h1{margin:0;font-size:1.6rem}
     p.lead{color:#444}
     .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,60,0.06);margin-top:18px}
-    a.button{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;background:var(--accent);color:white;font-weight:600}
+    pre{background:#0b1220;color:#e6f1ff;padding:12px;border-radius:8px;overflow:auto;font-size:0.9rem}
     footer{margin-top:28px;color:#666;font-size:0.9rem}
-    pre{background:#0b1220;color:#e6f1ff;padding:12px;border-radius:8px;overflow:auto}
-    @media (max-width:600px){.container{margin:20px;padding:14px}.logo{width:48px;height:48px}}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo">GH</div>
+      <div class="logo">HTML</div>
       <div>
-        <h1>Xin chào — Trang GitHub Pages của bạn</h1>
-        <p class="lead">Đây là mẫu **index.html** đơn giản. Chỉnh sửa nội dung rồi đẩy (push) lên nhánh <code>main</code> ở thư mục gốc để GitHub Pages xuất bản.</p>
+        <h1>Giới thiệu HTML Cơ Bản</h1>
+        <p class="lead">Trang này giúp bạn hiểu rõ từng ký hiệu trong mã HTML — ví dụ <code>&lt;</code>, <code>&gt;</code>, <code>{}</code>, <code>()</code> là gì và chúng được dùng ra sao.</p>
       </div>
     </header>
 
     <section class="card">
-      <h2>Nội dung mẫu</h2>
-      <p>Thêm nội dung HTML, CSS hoặc JavaScript vào file này. Ví dụ nút bên dưới giúp bật/tắt chế độ tối (chỉ minh họa):</p>
-      <p><a class="button" href="#" id="themeToggle">Bật/tắt chế độ tối</a></p>
-      <hr />
-      <h3>Cách sử dụng</h3>
-      <ol>
-        <li>Đặt file này tên <code>index.html</code> vào thư mục gốc của repository.</li>
-        <li>Push lên nhánh <code>main</code>.</li>
-        <li>Vào Settings → Pages → Deploy from a branch → chọn <code>main</code> và thư mục <code>/(root)</code> → Save.</li>
-        <li>Chờ một vài phút, truy cập <code>https://{username}.github.io/{repository}/</code>.</li>
-      </ol>
+      <h2>1️⃣ Giải thích các ký hiệu thường gặp</h2>
+      <ul>
+        <li><b>&lt; &gt;</b>: Dấu ngoặc nhọn dùng để bao thẻ HTML. Ví dụ <code>&lt;html&gt;</code> mở thẻ, <code>&lt;/html&gt;</code> đóng thẻ.</li>
+        <li><b>{ }</b>: Dấu ngoặc nhọn dùng trong CSS hoặc JavaScript để bao nội dung quy định. Ví dụ: <code>body { color: red; }</code></li>
+        <li><b>( )</b>: Dấu ngoặc tròn thường dùng trong hàm (function) trong JavaScript. Ví dụ: <code>alert("Xin chào!")</code></li>
+        <li><b>" "</b> hoặc <b>' '</b>: Dấu ngoặc kép/đơn bao quanh chuỗi ký tự (text string).</li>
+        <li><b>;</b>: Dấu chấm phẩy kết thúc lệnh trong CSS hoặc JavaScript.</li>
+        <li><b>//</b>: Ghi chú 1 dòng trong JavaScript (bị trình duyệt bỏ qua).</li>
+        <li><b>/* ... */</b>: Ghi chú nhiều dòng trong CSS hoặc JS.</li>
+      </ul>
+    </section>
 
-      <h3>Mã ví dụ (không cần thay đổi)</h3>
-      <pre>&lt;!-- index.html --&gt;</pre>
+    <section class="card">
+      <h2>2️⃣ Cấu trúc cơ bản của một trang HTML</h2>
+      <pre>
+&lt;!DOCTYPE html&gt;  ← Khai báo đây là tài liệu HTML5
+&lt;html&gt;           ← Thẻ bao toàn bộ trang web
+  &lt;head&gt;         ← Phần đầu: chứa tiêu đề, mô tả, CSS, meta...
+    &lt;title&gt;Tiêu đề trang&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;         ← Phần nội dung hiển thị trên trang
+    &lt;h1&gt;Tiêu đề lớn&lt;/h1&gt;
+    &lt;p&gt;Đoạn văn bản.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </section>
+
+    <section class="card">
+      <h2>3️⃣ Cách dùng CSS (trang trí giao diện)</h2>
+      <p>CSS giúp đổi màu, phông chữ, bố cục...</p>
+      <pre>
+body {
+  background-color: lightblue; /* Màu nền */
+  color: black; /* Màu chữ */
+  font-family: Arial; /* Kiểu chữ */
+}
+      </pre>
+    </section>
+
+    <section class="card">
+      <h2>4️⃣ JavaScript (tạo hành động cho web)</h2>
+      <p>JavaScript giúp web tương tác như bấm nút đổi màu, hiển thị thông báo...</p>
+      <pre>
+&lt;button onclick="alert('Xin chào!')"&gt;Bấm thử&lt;/button&gt;
+      </pre>
+    </section>
+
+    <section class="card">
+      <h2>5️⃣ Cách tải lên GitHub Pages</h2>
+      <ol>
+        <li>Lưu file này tên <code>index.html</code>.</li>
+        <li>Đặt vào thư mục gốc của repo GitHub.</li>
+        <li>Push lên nhánh <b>main</b>.</li>
+        <li>Vào <b>Settings → Pages → Deploy from a branch → main → /(root)</b>.</li>
+        <li>Chờ vài phút rồi truy cập đường dẫn web của bạn.</li>
+      </ol>
     </section>
 
     <footer>
-      <small>Muốn mình thêm phần menu, ảnh, hay Google Analytics không? Nói mình biết.</small>
+      <small>© 2025 — Hướng dẫn HTML cơ bản. Muốn mình thêm phần CSS nâng cao hay hướng dẫn JavaScript không? Nói nhé!</small>
     </footer>
   </div>
-
-  <script>
-    // Toggle theme (ví dụ đơn giản)
-    const btn = document.getElementById('themeToggle');
-    btn.addEventListener('pointerdown', ()=>{document.documentElement.style.filter='invert(.07) hue-rotate(180deg)';});
-    btn.addEventListener('pointerup', ()=>{document.documentElement.style.filter='';});
-    btn.addEventListener('click', e=>{e.preventDefault();});
-  </script>
 </body>
 </html>
