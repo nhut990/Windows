@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Ứng Dụng & ISO Windows - Minh Nhựt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tải phần mềm, ISO và Ghost Windows được chia sẻ bởi Minh Nhựt.">
     <style>
+        /* ... (CSS giữ nguyên như bản trước) ... */
         body { 
             font-family: Arial, sans-serif; 
             background: linear-gradient(120deg, #e0eaff 0%, #f7f7f7 100%);
@@ -83,10 +85,11 @@
             box-shadow: 0 2px 10px rgba(44,108,223,.09);
             transition: background 0.23s, box-shadow 0.23s, transform 0.18s;
         }
-        a:hover {
+        a:hover, a:focus {
             background: linear-gradient(90deg, #174d9c 60%, #3e7fd8 100%);
             box-shadow: 0 8px 24px rgba(44,108,223,.13);
             transform: translateY(-2px) scale(1.07);
+            outline: none;
         }
         .link-title {
             display: block;
@@ -98,7 +101,7 @@
             margin-top: 2px;
             transition: color 0.24s;
         }
-        a:hover .link-title {
+        a:hover .link-title, a:focus .link-title {
             color: #e0eaff;
         }
         .footer {
@@ -119,23 +122,31 @@
             50% { color: #61a0ff; }
             100% { color: #2d6cdf; }
         }
-        /* Đã xóa .signature */
+        @media screen and (max-width: 480px) {
+            .container {
+                max-width: 98vw;
+                padding: 24px 8px 20px 8px;
+            }
+            h1 {
+                font-size: 1.35em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Ứng Dụng & ISO Windows</h1>
         <p>
-            Chọn liên kết bên dưới để tải phần mềm hoặc bộ cài Windows, Ghost, ISO do chúng tôi chia sẻ:
+            Chọn liên kết dưới đây để tải phần mềm hoặc bộ cài Windows, Ghost, ISO do chúng tôi chia sẻ:
         </p>
         <ul>
             <li>
-                <a href="https://nhut990.github.io/Windows/apppc/" target="_blank" rel="noopener">
+                <a href="https://nhut990.github.io/Windows/apppc/" rel="noopener">
                     <span class="link-title">Ứng Dụng Windows</span>
                 </a>
             </li>
             <li>
-                <a href="https://nhut990.github.io/Windows/ioswin/" target="_blank" rel="noopener">
+                <a href="https://nhut990.github.io/Windows/ioswin/" rel="noopener">
                     <span class="link-title">ISO &amp; Ghost Windows</span>
                 </a>
             </li>
