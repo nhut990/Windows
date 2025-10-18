@@ -74,7 +74,7 @@
         @keyframes listFadeIn {
             to { opacity: 1; transform: translateY(0); }
         }
-        a {
+        a.iso-link {
             display: inline-block;
             text-decoration: none;
             background: linear-gradient(90deg, #2d6cdf 60%, #61a0ff 100%);
@@ -87,10 +87,30 @@
             transition: background 0.23s, box-shadow 0.23s, transform 0.18s;
             min-width: 220px;
         }
-        a:hover {
+        a.iso-link:hover {
             background: linear-gradient(90deg, #174d9c 60%, #3e7fd8 100%);
             box-shadow: 0 8px 24px rgba(44,108,223,.13);
             transform: translateY(-2px) scale(1.07);
+        }
+        /* Style cho liên kết "Trở về trang chủ" */
+        .back-home {
+            display: block;
+            text-align: center;
+            color: #e53935;
+            font-weight: bold;
+            font-size: 1.18em;
+            text-decoration: none;
+            margin-top: 34px;
+            margin-bottom: 18px;
+            background: none;
+            border: none;
+            padding: 0;
+            transition: color 0.18s;
+            letter-spacing: 0.5px;
+        }
+        .back-home:hover {
+            color: #b71c1c;
+            text-decoration: underline;
         }
         .footer {
             margin-top: 30px;
@@ -121,31 +141,33 @@
         </p>
         <ul>
             <li>
-                <a href="https://www.mediafire.com/folder/xwizwgg7hli1d/iso+win" target="_blank" rel="noopener">
-                    Tổng hợp ios Windows 1
+                <a href="https://www.mediafire.com/folder/xwizwgg7hli1d/iso+win" class="iso-link" target="_blank" rel="noopener">
+                    Tổng hợp ISO Windows 1
                 </a>
             </li>
             <li>
-                <a href="https://docs.google.com/spreadsheets/d/1zTF5uRJKfZ3ziLxAZHh47kF85ja34_OFB5C5bVSPumk/htmlview?fbclid=IwAR071KjmP55GtdVqjWwBcIOOCd19fsZrvtLYsztnjlqw72sBR17dnEvpzBI" target="_blank" rel="noopener">
-                    Tổng hợp ios Windows 2
+                <a href="https://docs.google.com/spreadsheets/d/1zTF5uRJKfZ3ziLxAZHh47kF85ja34_OFB5C5bVSPumk/htmlview?fbclid=IwAR071KjmP55GtdVqjWwBcIOOCd19fsZrvtLYsztnjlqw72sBR17dnEvpzBI" class="iso-link" target="_blank" rel="noopener">
+                    Tổng hợp ISO Windows 2
                 </a>
             </li>
             <li>
-                <a href="https://archive.org/download/en_windows_10_multiple_editions_version_1703_updated_march_2017_x64_dvd_10189288" target="_blank" rel="noopener">
-                    Tổng hợp ios Windows 3
+                <a href="https://archive.org/download/en_windows_10_multiple_editions_version_1703_updated_march_2017_x64_dvd_10189288" class="iso-link" target="_blank" rel="noopener">
+                    Tổng hợp ISO Windows 3
                 </a>
             </li>
             <li>
-                <a href="https://archive.org/download/IOSWIN33" target="_blank" rel="noopener">
-                    Tổng hợp ios Windows 4
+                <a href="https://archive.org/download/IOSWIN33" class="iso-link" target="_blank" rel="noopener">
+                    Tổng hợp ISO Windows 4
                 </a>
             </li>
             <li>
-                <a href="https://archive.org/download/en_windows_10_consumer_editions_version_1909_x64_dvd_be09950e_2" target="_blank" rel="noopener">
-                    Tổng hợp ios Windows 5
+                <a href="https://archive.org/download/en_windows_10_consumer_editions_version_1909_x64_dvd_be09950e_2" class="iso-link" target="_blank" rel="noopener">
+                    Tổng hợp ISO Windows 5
                 </a>
             </li>
         </ul>
+        <!-- Liên kết "Trở về trang chủ" nằm phía trên footer, không mở tab -->
+        <a href="https://nhut990.github.io/" class="back-home">Trở về trang chủ</a>
         <div class="footer">
             Created by <span class="name">Minh Nhựt</span><br>
             &copy; 2025
