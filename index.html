@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tải phần mềm, ISO và Ghost Windows được chia sẻ bởi Minh Nhựt.">
     <style>
-        /* ... (CSS giữ nguyên như bản trước) ... */
         body { 
             font-family: Arial, sans-serif; 
             background: linear-gradient(120deg, #e0eaff 0%, #f7f7f7 100%);
@@ -122,6 +121,27 @@
             50% { color: #61a0ff; }
             100% { color: #2d6cdf; }
         }
+        .back-home {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 12px;
+            margin-top: 18px;
+        }
+        .back-home a {
+            background: linear-gradient(90deg, #1e88e5 60%, #90caf9 100%);
+            color: #fff;
+            padding: 12px 34px;
+            border-radius: 8px;
+            font-size: 1.08em;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(44,108,223,.07);
+            transition: background 0.18s, transform 0.18s;
+            text-decoration: none;
+        }
+        .back-home a:hover, .back-home a:focus {
+            background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+            transform: translateY(-2px) scale(1.05);
+        }
         @media screen and (max-width: 480px) {
             .container {
                 max-width: 98vw;
@@ -129,6 +149,10 @@
             }
             h1 {
                 font-size: 1.35em;
+            }
+            .back-home a {
+                font-size: 1em;
+                padding: 10px 18px;
             }
         }
     </style>
@@ -152,6 +176,9 @@
             </li>
         </ul>
         <div class="footer">
+            <div class="back-home">
+                <a href="https://nhut990.github.io/">Trở lại trang chủ</a>
+            </div>
             Created by <span class="name">Minh Nhựt</span><br>
             &copy; 2025
         </div>
