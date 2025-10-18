@@ -92,6 +92,7 @@
             box-shadow: 0 8px 24px rgba(44,108,223,.13);
             transform: translateY(-2px) scale(1.07);
         }
+        /* Footer style */
         .footer {
             margin-top: 30px;
             text-align: center;
@@ -109,6 +110,26 @@
             0% { color: #2d6cdf; }
             50% { color: #61a0ff; }
             100% { color: #2d6cdf; }
+        }
+        /* Home link style (màu đỏ, không khung, không hiệu ứng button) */
+        .home-link {
+            display: block;
+            margin-bottom: 8px;
+            text-align: center;
+            font-size: 1.06em;
+            font-weight: 600;
+            color: #e53935;
+            background: none;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            min-width: 0;
+            transition: color 0.2s;
+            text-decoration: underline;
+        }
+        .home-link:hover {
+            color: #b71c1c;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -147,6 +168,7 @@
             </li>
         </ul>
         <div class="footer">
+            <a class="home-link" href="https://nhut990.github.io/">Trở về trang chủ</a>
             Created by <span class="name">Minh Nhựt</span><br>
             &copy; 2025
         </div>
